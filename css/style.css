@@ -246,13 +246,16 @@ header nav {
 	background-repeat: repeat-x; /*картинка не повторяется.Фоновый рисунок повторяется только по горизонтали. Аналогично repeat no-repeat. */
 	background-position: 0 bottom; /*выравниваем фон по высоте*/
 }
+.promo article {
+    position: relative;
+}
 .promo-content {
 	position: relative;
 	z-index: 2;
 	display: flex;
 	flex-direction: column; /*выравнивание обьектов по вертикали*/
 	justify-content: space-between; /*отступы по вертикали между контентом*/
-	/* min-width: 500px;*/
+	/* width: 500px; */
 	height: 390px; 
 }
 .promo-content .title {
@@ -277,10 +280,11 @@ header nav {
 	color: #ef5e42;
 }
 .promo .promo-img {
-	position: relative;
-	z-index: 1;
-	top: -36px;
-	right: 140px;
+	position: absolute;
+	/* z-index: 1; */
+	/* top: -36px;
+	left: 27%;
+    max-width: 1100px; */
 }
 /*****СЕКЦИЯ PROMO (КОНЕЦ)*****/
 
@@ -289,14 +293,19 @@ header nav {
         max-width: 1290px;
     }
 
-}
+    .promo-img {
+    max-width: 1100px;
+	top: -36px;
+	left: 27%;
+    }
+}   
 
 @media(max-width: 1299px) {
     .logo {
         max-width: 125px;
     }
-    .main-menu .btn {
-        margin-right: 30px;
+    .btn {
+        /* margin-right: 30px; */
 
         padding-left: 31px;
         padding-right: 28px;
@@ -305,11 +314,19 @@ header nav {
 
         font-size: 15px;
     }
+    .promo-img {
+        max-width: 684px !important;
+        left: 35%;
+    }
 }
 
 @media(max-width: 991px) {
     .main-menu {
         justify-content: flex-end;
+    }
+    .promo {
+        padding-top: 0;
+        background-image: none;
     }
     .promo-content {
         justify-content: center;
@@ -321,10 +338,13 @@ header nav {
     }
     .promo-content .title {
         font-size: 32px;
-        width: 640px;
+        /* min-width: 276px; */
+        width: 642px;
     }
-    .promo {
-        padding-top: 0;
+    .promo-img {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
     }
 }
 
@@ -337,7 +357,7 @@ header nav {
     }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 479px) {
     
     .logo {
         max-width: 72px;
@@ -345,23 +365,25 @@ header nav {
     }
 
     .main-menu .btn {
-        margin-right: 16px;
+        /* margin-right: 16px; */
         padding-left: 20px;
         padding-right: 18px;
         padding-top: 12px;
         padding-bottom: 14px;
         font-size: 13px;
     }
+
     .promo-content .title {
         font-size: 28px;
-        width: 276px;
-        
+        max-width: 276px;    
     }
+
     .buttons {
         flex-direction: column;
+        /* margin-bottom: 50px; */
     }
+
     .buttons .btn {
         margin-bottom: 20px;
     }
 }
-

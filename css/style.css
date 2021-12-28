@@ -307,6 +307,57 @@ header nav {
 }
 /*****СЕКЦИЯ COMPANIES (КОНЕЦ)*****/
 
+/*****СЕКЦИЯ STEPS (НАЧАЛО)*****/
+.steps {
+	padding: 90px 0;
+}
+.steps .container {
+	justify-content: center;
+}
+.steps-content {
+	justify-content: space-between; /*ровняем расстояния между блоками*/
+	flex-wrap: wrap;
+}
+.steps-content > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /*выравнивание по оси*/
+	width: 370px; /*задаём ширину и блоки ровняются по 3 в ряд*/
+	min-height: 320px; /*ровняем по вертикали*/
+}
+.steps-header .title {
+	margin-bottom: 25px;
+	line-height: 150%;
+	text-align: center;
+}
+.steps-header .btn::after {
+	/*элемент вокруг кнопки*/
+	position: absolute;
+	top: -35px;
+	left: -25px;
+
+    width: 130%;
+	height: 110px;
+
+	content: "";
+
+	background-image: url(../img/btn-bg.svg);
+	background-repeat: no-repeat;
+    background-size: 100% 110px;
+}
+.steps-item img {
+	height: 136px;
+}
+.steps-item h3 {
+	font-size: 24px;
+	margin: 22px 0;
+}
+.steps-item p {
+	text-align: center;
+}
+/*****СЕКЦИЯ STEPS (КОНЕЦ)*****/
+
+
 @media(min-width: 1300px) {
     .container {
         max-width: 1290px;
@@ -336,6 +387,9 @@ header nav {
     .promo-img {
         max-width: 684px !important;
         left: 35%;
+    }
+    .steps .title {
+        font-size: 32px;
     }
 }
 
@@ -388,14 +442,16 @@ header nav {
         margin-right: 10px;
     }
 
-    .main-menu .btn {
-        /* margin-right: 16px; */
+    .btn {
+        margin-right: 16px;
         padding-left: 20px;
         padding-right: 18px;
         padding-top: 12px;
         padding-bottom: 14px;
         font-size: 13px;
     }
+
+
     .title {
         font-size: 28px;
     }
